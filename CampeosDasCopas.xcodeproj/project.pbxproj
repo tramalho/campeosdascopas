@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3790151824A55E4B0043EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790151724A55E4B0043EC79 /* AppDelegate.swift */; };
-		3790151A24A55E4B0043EC79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790151924A55E4B0043EC79 /* ViewController.swift */; };
 		3790151D24A55E4B0043EC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3790151B24A55E4B0043EC79 /* Main.storyboard */; };
 		3790151F24A55E4E0043EC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3790151E24A55E4E0043EC79 /* Assets.xcassets */; };
 		3790152224A55E4E0043EC79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3790152024A55E4E0043EC79 /* LaunchScreen.storyboard */; };
+		3790152C24A55F4D0043EC79 /* Bandeiras in Resources */ = {isa = PBXBuildFile; fileRef = 3790152A24A55F4D0043EC79 /* Bandeiras */; };
+		3790152D24A55F4D0043EC79 /* winners.json in Resources */ = {isa = PBXBuildFile; fileRef = 3790152B24A55F4D0043EC79 /* winners.json */; };
+		3790153124A561DB0043EC79 /* WinnersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790153024A561DB0043EC79 /* WinnersTableViewController.swift */; };
+		3790153324A562000043EC79 /* WorldCupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790153224A562000043EC79 /* WorldCupViewController.swift */; };
+		3790153524A562350043EC79 /* WorldCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790153424A562350043EC79 /* WorldCup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3790151424A55E4B0043EC79 /* CampeosDasCopas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampeosDasCopas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3790151724A55E4B0043EC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3790151924A55E4B0043EC79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3790151C24A55E4B0043EC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3790151E24A55E4E0043EC79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3790152124A55E4E0043EC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3790152324A55E4E0043EC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3790152A24A55F4D0043EC79 /* Bandeiras */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bandeiras; sourceTree = "<group>"; };
+		3790152B24A55F4D0043EC79 /* winners.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = winners.json; sourceTree = "<group>"; };
+		3790153024A561DB0043EC79 /* WinnersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersTableViewController.swift; sourceTree = "<group>"; };
+		3790153224A562000043EC79 /* WorldCupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupViewController.swift; sourceTree = "<group>"; };
+		3790153424A562350043EC79 /* WorldCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		3790151624A55E4B0043EC79 /* CampeosDasCopas */ = {
 			isa = PBXGroup;
 			children = (
-				3790151724A55E4B0043EC79 /* AppDelegate.swift */,
-				3790151924A55E4B0043EC79 /* ViewController.swift */,
-				3790151B24A55E4B0043EC79 /* Main.storyboard */,
+				3790153724A562500043EC79 /* src */,
+				3790152924A55F3A0043EC79 /* files */,
+				3790152E24A561B20043EC79 /* Views */,
 				3790151E24A55E4E0043EC79 /* Assets.xcassets */,
-				3790152024A55E4E0043EC79 /* LaunchScreen.storyboard */,
 				3790152324A55E4E0043EC79 /* Info.plist */,
 			);
 			path = CampeosDasCopas;
+			sourceTree = "<group>";
+		};
+		3790152924A55F3A0043EC79 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				3790152A24A55F4D0043EC79 /* Bandeiras */,
+				3790152B24A55F4D0043EC79 /* winners.json */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
+		3790152E24A561B20043EC79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3790151B24A55E4B0043EC79 /* Main.storyboard */,
+				3790152024A55E4E0043EC79 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3790152F24A561C00043EC79 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3790153024A561DB0043EC79 /* WinnersTableViewController.swift */,
+				3790153224A562000043EC79 /* WorldCupViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3790153624A5623E0043EC79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3790153424A562350043EC79 /* WorldCup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3790153724A562500043EC79 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3790153624A5623E0043EC79 /* Models */,
+				3790151724A55E4B0043EC79 /* AppDelegate.swift */,
+				3790152F24A561C00043EC79 /* Controllers */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3790152224A55E4E0043EC79 /* LaunchScreen.storyboard in Resources */,
+				3790152D24A55F4D0043EC79 /* winners.json in Resources */,
 				3790151F24A55E4E0043EC79 /* Assets.xcassets in Resources */,
+				3790152C24A55F4D0043EC79 /* Bandeiras in Resources */,
 				3790151D24A55E4B0043EC79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +189,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3790151A24A55E4B0043EC79 /* ViewController.swift in Sources */,
+				3790153124A561DB0043EC79 /* WinnersTableViewController.swift in Sources */,
+				3790153524A562350043EC79 /* WorldCup.swift in Sources */,
 				3790151824A55E4B0043EC79 /* AppDelegate.swift in Sources */,
+				3790153324A562000043EC79 /* WorldCupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
