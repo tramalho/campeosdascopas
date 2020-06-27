@@ -37,8 +37,12 @@ class WinnersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        // Configure the cell...
-
+        let worldcup = worldcups[indexPath.row]
+        
+        cell.textLabel?.text = "Copa \(worldcup.year) - \(worldcup.country)"
+        cell.detailTextLabel?.text = "\(worldcup.winner) vs \(worldcup.vice)"
+        cell.imageView?.image = UIImage(named: "\(worldcup.winner).png")
+        
         return cell
     }
  
