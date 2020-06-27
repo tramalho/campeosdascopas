@@ -27,6 +27,14 @@ class WinnersTableViewController: UITableViewController {
             print(error.localizedDescription)
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! WorldCupViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            vc.wordcup = worldcups[indexPath.row]
+        }
+    }
     
     // MARK: - Table view data source
 
@@ -35,13 +43,9 @@ class WinnersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WinnersTableViewCell
 
-        let worldcup = worldcups[indexPath.row]
-        
-        cell.textLabel?.text = "Copa \(worldcup.year) - \(worldcup.country)"
-        cell.detailTextLabel?.text = "\(worldcup.winner) vs \(worldcup.vice)"
-        cell.imageView?.image = UIImage(named: "\(worldcup.winner).png")
+        cell.bind(with: worldcups[indexPath.row])
         
         return cell
     }

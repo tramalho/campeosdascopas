@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Campeões das Copas-->
         <scene sceneID="PVK-w6-cwm">
             <objects>
                 <tableViewController id="5UY-t3-YB3" customClass="WinnersTableViewController" customModule="CampeosDasCopas" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,9 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Dq2-5b-wFD">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-iF-JrL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="bvZ-iF-JrL" firstAttribute="leading" secondItem="Dq2-5b-wFD" secondAttribute="leading" id="1vT-4T-QYr"/>
+                                <constraint firstItem="bvZ-iF-JrL" firstAttribute="top" secondItem="Dq2-5b-wFD" secondAttribute="top" id="6ZB-pZ-dwd"/>
+                                <constraint firstAttribute="trailing" secondItem="bvZ-iF-JrL" secondAttribute="trailing" id="7s6-Ym-ebq"/>
+                                <constraint firstAttribute="bottom" secondItem="bvZ-iF-JrL" secondAttribute="bottom" id="iYf-pv-ptF"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="1Gw-Af-xp3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="1Gw-Af-xp3" customClass="WinnersTableViewCell" customModule="CampeosDasCopas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="172" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Gw-Af-xp3" id="xpy-sF-XsO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
@@ -119,6 +135,17 @@
                                         <constraint firstItem="Qd3-KD-DrE" firstAttribute="trailing" secondItem="aBa-CS-Pb6" secondAttribute="trailing" id="wBV-lu-mss"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="country" destination="3cj-tT-2ge" id="yhQ-wU-Plb"/>
+                                    <outlet property="imgVice" destination="uV1-Co-2jT" id="OeH-Np-yZb"/>
+                                    <outlet property="imgWinner" destination="vwG-iI-Rhd" id="Moy-Em-Yc4"/>
+                                    <outlet property="labelScoreVice" destination="taH-iO-Nnm" id="ZUa-5q-4wt"/>
+                                    <outlet property="labelScoreWinner" destination="Qd3-KD-DrE" id="7Gg-ya-A0F"/>
+                                    <outlet property="labelVice" destination="hOD-DM-yHw" id="tXM-OX-ggJ"/>
+                                    <outlet property="labelWinner" destination="QA6-eP-fFg" id="AIm-CP-eMt"/>
+                                    <outlet property="year" destination="Wpf-e0-P91" id="RC6-QY-qbk"/>
+                                    <segue destination="HcM-GO-qJV" kind="show" id="sR2-oe-4XL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -126,7 +153,7 @@
                             <outlet property="delegate" destination="5UY-t3-YB3" id="KTT-VM-sML"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="3UA-ao-weU"/>
+                    <navigationItem key="navigationItem" title="Campeões das Copas" id="3UA-ao-weU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLL-fH-t3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,5 +196,6 @@
         <image name="Brasil.png" width="138" height="93"/>
         <image name="calendar" width="56" height="56"/>
         <image name="globe" width="56" height="56"/>
+        <image name="header" width="1200" height="514"/>
     </resources>
 </document>

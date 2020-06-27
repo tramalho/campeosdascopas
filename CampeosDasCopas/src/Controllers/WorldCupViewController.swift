@@ -10,6 +10,8 @@ import UIKit
 
 class WorldCupViewController: UIViewController {
 
+    var wordcup: WorldCup? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
