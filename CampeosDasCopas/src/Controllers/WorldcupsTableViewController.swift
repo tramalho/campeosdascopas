@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WinnersTableViewController: UITableViewController {
+class WorldcupsTableViewController: UITableViewController {
 
     private var worldcups: [WorldCup] = []
     
@@ -29,7 +29,7 @@ class WinnersTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! WorldCupViewController
+        let vc = segue.destination as! WinnerViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
             vc.wordcup = worldcups[indexPath.row]
@@ -43,7 +43,7 @@ class WinnersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WinnersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WorldcupTableViewCell
 
         cell.bind(with: worldcups[indexPath.row])
         

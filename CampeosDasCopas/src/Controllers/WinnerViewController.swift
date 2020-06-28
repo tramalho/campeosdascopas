@@ -8,14 +8,26 @@
 
 import UIKit
 
-class WorldCupViewController: UIViewController {
+class WinnerViewController: UIViewController {
 
+    @IBOutlet weak var imgWinner: UIImageView!
+    @IBOutlet weak var labelWinner: UILabel!
+    @IBOutlet weak var labelScore: UILabel!
+    @IBOutlet weak var imgVice: UIImageView!
+    @IBOutlet weak var labelVice: UILabel!
     var wordcup: WorldCup? = nil
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let wc = wordcup {
+            title = "Worldcup: \(wc.year)"
+            imgWinner.image = UIImage(named: "\(wc.winner).png")
+            labelWinner.text = wc.winner
+            labelScore.text = "\(wc.winnerScore) x \(wc.viceScore)"
+            imgVice.image = UIImage(named: "\(wc.vice).png")
+            labelVice.text = wc.vice
+        }
     }
     
 
