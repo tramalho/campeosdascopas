@@ -64,6 +64,7 @@
 		379015CA24A7F28C0043EC79 /* Brasil.png in Resources */ = {isa = PBXBuildFile; fileRef = 3790153A24A7F1EE0043EC79 /* Brasil.png */; };
 		379015CB24A7F28C0043EC79 /* winners.json in Resources */ = {isa = PBXBuildFile; fileRef = 3790152B24A55F4D0043EC79 /* winners.json */; };
 		379015CD24A7FB580043EC79 /* WorldcupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379015CC24A7FB580043EC79 /* WorldcupTableViewCell.swift */; };
+		379015CF24A960F90043EC79 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379015CE24A960F90043EC79 /* GameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		3790156924A7F23F0043EC79 /* Uruguai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Uruguai.png; sourceTree = "<group>"; };
 		3790156A24A7F2400043EC79 /* Espanha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Espanha.png; sourceTree = "<group>"; };
 		379015CC24A7FB580043EC79 /* WorldcupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldcupTableViewCell.swift; sourceTree = "<group>"; };
+		379015CE24A960F90043EC79 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				379015CC24A7FB580043EC79 /* WorldcupTableViewCell.swift */,
 				3790153024A561DB0043EC79 /* WorldcupsTableViewController.swift */,
 				3790153224A562000043EC79 /* WinnerViewController.swift */,
+				379015CE24A960F90043EC79 /* GameTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				3790151824A55E4B0043EC79 /* AppDelegate.swift in Sources */,
 				379015CD24A7FB580043EC79 /* WorldcupTableViewCell.swift in Sources */,
 				3790153324A562000043EC79 /* WinnerViewController.swift in Sources */,
+				379015CF24A960F90043EC79 /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

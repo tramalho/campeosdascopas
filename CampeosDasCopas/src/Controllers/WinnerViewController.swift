@@ -52,11 +52,25 @@ extension WinnerViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GameTableViewCell
         
+        if let vc = wordcup {
+            let match = vc.matches[indexPath.section]
+            let game = match.games[indexPath.row]
+            cell.prepare(with: game)
+        }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let vc = wordcup {
+            let match = vc.matches[section]
+            return match.stage
+        }
+        
+        return ""
     }
 }
 
